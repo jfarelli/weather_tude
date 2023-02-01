@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+<h2 align="center">
+  <img align="center" alt="funky" src="./src/images/title.png" width="738px"/>
+<br>
+</h2>
+<br>
+<p align="center"> I live in Colorado where the weather seems to change every 15 minutes and it can take your attitude from a soaring high, playing outdoor games in the beautiful sun and warmth, to dismal and agravating low as the wind, rain, and possible snow come out of nowhere to freeze out your hopes and dreams.
+<br>
+<p align="center">Weather-TUDE pulls in data from the OpenWeather API to get the weather data of whichever city the user puts in and gives the user up-to-date weather with a little attitude, so they (hopefully) know what to expect...maybe.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br>
 
-## Available Scripts
+### Contributors:
 
-In the project directory, you can run:
+Jordan Farelli: [LinkedIn](https://www.linkedin.com/in/jordan-farelli/) | [GitHub](https://github.com/jfarelli) | [Portfolio](https://portfolio-jfarelli.vercel.app/)
 
-### `npm start`
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Table of contents
+* [How To Use](#how)
+* [Features](#features)
+* [Challenges](#challenges)
+* [Future Iterations](#future)
+* [Technologies Used](#tech)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+<br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### How To Use: <a name="how"></a>
 
-### `npm run build`
+**For the casual user:**
+* Please visit my app [Weather-TUDE](https://weather-tude.vercel.app/)!
+* Type in a city into the input and weather details will be shown for that city.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**For the developers out there:**
+* `Fork` this repository and `Clone` it down to your local machine
+* `cd` into the repository
+* Once in the repository, run `npm install`
+* After installation, run `npm start`
+* The app should now open up on your default browser with the URL `http://localhost:3000`
+* You're now ready to move through the app!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br>
 
-### `npm run eject`
+*USER FLOW*
+* User Flow
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<br>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+*ERROR HANDLING*
+* Invalid Entry
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br>
 
-### Code Splitting
+### Features: <a name="features"></a>
+**User:**
+* Displays the following weather details for the inputted city: 
+  * City Name, Current Temp, Weather Conditions, Current Day's High and Low Temperature, Feels Like (Other's Say It's), Humidity (Air Wetness), Wind Speed (It's This Windy), a sassy message, and a five-day weather forecast.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+**Developer:**
+<!-- * End to End testing with mulitple UX in mind -->
+<!-- * Provide different React Router routes -->
+<!-- * Proper error handling for all "Sad Paths" of a UX -->
+<!-- * Secure a 95% lighthouse accessibility score -->
+<!-- * A consistent, modular file structure -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<br>
 
-### Making a Progressive Web App
+### Challenges & Reflections: <a name="challenges"></a>
+* This is my first solo-project after graduating the [Turing School of Software & Design](https://turing.edu/?gclid=Cj0KCQiAz9ieBhCIARIsACB0oGKG2l2iJY1j7t81uU6Pn6dJqdD3gi0m_QfV66vrhnGg4r7xgsv--RkaAuzSEALw_wcB).
+* It was great putting the skills I learned to use, and also implementing some new ones, like creating custom hooks and having them work! 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<br>
 
-### Advanced Configuration
+### Future Iterations: <a name="future"></a>
+* Display the high and low temp for each day in the 5-Day Forecast.
+* Create an external link to the National Weather Service, or similar site for further satellite weather details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<br>
 
-### Deployment
+### Technologies used:<br><a name="tech"></a>
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
+![Cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e)
+![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<br>
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
