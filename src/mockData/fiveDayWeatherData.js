@@ -1,4 +1,4 @@
-const fiveDayForecast = [
+const fiveDayWeather = [
   {
     dt: 1675198800,
     main: {
@@ -921,4 +921,4 @@ const fiveDayForecast = [
   },
 ];
 
-export default fiveDayForecast;
+export default fiveDayWeather;

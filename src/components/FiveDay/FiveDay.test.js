@@ -1,39 +1,39 @@
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
+import React from 'react';
 import FiveDay from './FiveDay';
 import mockData from '../../mockData/mockData';
-import fiveDayForecast from '../../mockData/fiveDayWeatherData';
+import '@testing-library/jest-dom';
+import { render, screen, cleanup } from '@testing-library/react';
+import fiveDayWeather from '../../mockData/fiveDayWeatherData';
 
-const MockFiveDayDetails = () => {
-  let data = mockData;
-  return <FiveDay data={data} fiveDayForecast={fiveDayForecast} />;
-};
+afterEach(cleanup);
 
-describe('FiveDay', () => {
-  test('Should display a 5-Day Weather Forecast div', () => {
-    render(<MockFiveDayDetails />);
-    const divElement = screen.getByTestId(/five-day-div/i);
-    expect(divElement).toBeInTheDocument();
+describe('FiveDay component', () => {
+  const data = { name: 'Denver' };
+  const fiveDayForecast = fiveDayWeather;
 
-    const textElement = screen.getByText(/5-day forecast for/i);
-    expect(textElement).toBeInTheDocument();
+  test('it should display a 5-Day Weather Forecast div', () => {
+    render(<FiveDay data={data} fiveDayForecast={fiveDayForecast} />);
+    expect(screen.getByTestId(/five-day-div/i)).toBeInTheDocument();
+    expect(screen.getByText(/5-day forecast for/i)).toBeInTheDocument();
   });
 
-  test('Should display five days ahead', () => {
-    render(<MockFiveDayDetails />);
-    const day1Element = screen.getByText(/wednesday/i);
-    expect(day1Element).toBeInTheDocument();
+  test('it should display the 5-day forecast for the given city name', () => {
+    render(<FiveDay data={data} fiveDayForecast={fiveDayForecast} />);
+    expect(screen.getByText(/denver/i)).toBeInTheDocument();
+  });
 
-    const day2Element = screen.getByText(/thursday/i);
-    expect(day2Element).toBeInTheDocument();
+  test('it should list the days of the week', () => {
+    render(<FiveDay data={data} fiveDayForecast={fiveDayForecast} />);
+    expect(screen.getByText(/wednesday/i)).toBeInTheDocument();
+    expect(screen.getByText(/thursday/i)).toBeInTheDocument();
+    expect(screen.getByText(/friday/i)).toBeInTheDocument();
+    expect(screen.getByText(/saturday/i)).toBeInTheDocument();
+    expect(screen.getByText(/sunday/i)).toBeInTheDocument();
+  });
 
-    const day3Element = screen.getByText(/friday/i);
-    expect(day3Element).toBeInTheDocument();
-
-    const day4Element = screen.getByText(/saturday/i);
-    expect(day4Element).toBeInTheDocument();
-
-    const day5Element = screen.getByText(/sunday/i);
-    expect(day5Element).toBeInTheDocument();
+  test('it should format the description with capitalized words', () => {
+    render(<FiveDay data={data} fiveDayForecast={fiveDayForecast} />);
+    expect(screen.getAllByText(/clear sky/i)[0]).toBeInTheDocument();
+    expect(screen.getAllByText(/overcast clouds/i)[0]).toBeInTheDocument();
   });
 });
