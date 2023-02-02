@@ -6,7 +6,7 @@ const LoadingIcon = () => {
   return (
     <>
       <Header />
-      <div className="loading-container">
+      <div className="loading-container" data-testid='loading-container'>
         <img className="loading-image" src={oval} alt="loading" />
       </div>
     </>

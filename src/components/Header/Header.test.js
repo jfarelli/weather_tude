@@ -1,23 +1,47 @@
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
 import Header from './Header';
+import Form from '../Form/Form';
+import '@testing-library/jest-dom';
+import { render, screen, fireEvent } from '@testing-library/react';
 
-const MockHeaderDetails = () => {
-  return <Header />;
-};
+jest.mock('../Form/Form', () => {
+  return jest.fn(({ cityName, setCityName, searchLocation }) => {
+    return (
+      <div>
+        <input
+          type="text"
+          defaultValue={cityName}
+          onKeyDown={searchLocation}
+          onChange={(e) => setCityName(e.target.value)}
+          placeholder="Enter City Name"
+        ></input>
+      </div>
+    );
+  });
+});
 
 describe('Header', () => {
-  test('Should display "Weather-Tude" title in the Header', () => {
-    render(<MockHeaderDetails />);
-    const titleElement = screen.getByText(/weather-/i);
-    expect(titleElement).toBeInTheDocument();
+  test('should display "Weather-Tude" title and the tagline in the Header', () => {
+    render(
+      <Header
+        cityName="Denver"
+        setCityName={() => {}}
+        searchLocation={() => {}}
+      />
+    );
+    expect(screen.getByText(/weather-/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/the imperfect weather app that tells it like it is./i)
+    ).toBeInTheDocument();
   });
 
-  test('Should display "Weather-Tude" tag-line in the Header', () => {
-    render(<MockHeaderDetails />);
-    const textElement = screen.getByText(
-      /the imperfect weather app that tells it like it is/i
+  test('renders the header with the form element', () => {
+    render(
+      <Header
+        cityName="Denver"
+        setCityName={() => {}}
+        searchLocation={() => {}}
+      />
     );
-    expect(textElement).toBeInTheDocument();
+    expect(Form).toHaveBeenCalled();
   });
 });
