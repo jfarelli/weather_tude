@@ -30,7 +30,7 @@ const WeatherDetails = ({
         </p>
       </div>
       <div className="rude-text-and-display">
-        <div className="display-box">
+        <div className="display-box" data-testid="display-box">
           <div>
             <p className="feels-like">Others say it's:</p>
             <p className="data">{data.main.feels_like.toFixed()}°F</p>
@@ -46,7 +46,7 @@ const WeatherDetails = ({
             )} `}</p>
           </div>
         </div>
-        <div className="rude-text-container">
+        <div className="rude-text-container" data-testid="rude-container">
           <p className="rude-text">{displayedText}</p>
         </div>
       </div>
