@@ -50,6 +50,11 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  .five-day-div {
+    position:relative;
+    height: auto;
+  }
+
   .five-day-container {
     width: 50rem;
   }
