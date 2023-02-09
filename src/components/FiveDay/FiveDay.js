@@ -3,7 +3,7 @@ const dayjs = require('dayjs');
 
 const FiveDay = ({ data, fiveDayForecast }) => {
   return (
-    <div className="five-day-div" data-testid='five-day-div'>
+    <div className="five-day-div" data-testid="five-day-div">
       <h1 className="five-day-forecast-title-text">
         5-Day Forecast for <span className="five-day-city">{data.name}</span>
       </h1>
