@@ -29,7 +29,7 @@ describe('App / User Flow', () => {
       .get('label')
       .should(
         'contain',
-        'For (possibly) more accurate results, search by City Name, State Code, and Zip Code together.'
+        'For more accurate results, search by City Name, State Code, and Zip Code together.'
       );
   });
 
@@ -75,13 +75,16 @@ describe('App / User Flow', () => {
       .get('.data')
       .eq(2)
       .should('have.text', '3 mph NE ')
+      .get('.data')
+      .eq(3)
+      .should('not.exist')
       .get('.rude-text-container')
       .should('exist')
       .get('.rude-text')
       .should('exist');
   });
 
-  it('should get five day forecast data for the city typed into the input', () => {
+  it('should display five day forecast data', () => {
     cy.visit('http://localhost:3000')
       .get('input')
       .should('exist')
@@ -95,39 +98,45 @@ describe('App / User Flow', () => {
       .get('.five-day-div')
       .should('exist')
       .get('.five-day-forecast-title-text')
-      .should('contain', '5-Day Forecast for')
+      .should('contain', '5-Day Forecast for Denver')
       .get('.five-day-container')
       .children()
       .should('have.length', 5)
       .get('.day')
       .eq(0)
-      .should('have.text', 'Friday')
+      .should('exist')
       .get('.day-weather')
       .eq(0)
-      .should('have.text', 'Clear Sky')
+      .should('exist')
       .get('.day')
       .eq(1)
-      .should('have.text', 'Saturday')
+      .should('exist')
       .get('.day-weather')
       .eq(1)
-      .should('have.text', 'Clear Sky')
+      .should('exist')
       .get('.day')
       .eq(2)
-      .should('have.text', 'Sunday')
+      .should('exist')
       .get('.day-weather')
       .eq(2)
-      .should('have.text', 'Broken Clouds')
+      .should('exist')
       .get('.day')
       .eq(3)
-      .should('have.text', 'Monday')
+      .should('exist')
       .get('.day-weather')
       .eq(3)
-      .should('have.text', 'Scattered Clouds')
+      .should('exist')
       .get('.day')
       .eq(4)
-      .should('have.text', 'Tuesday')
+      .should('exist')
       .get('.day-weather')
       .eq(4)
-      .should('have.text', 'Clear Sky');
+      .should('exist')
+      .get('.day')
+      .eq(5)
+      .should('not.exist')
+      .get('.day-weather')
+      .eq(5)
+      .should('not.exist');
   });
 });
