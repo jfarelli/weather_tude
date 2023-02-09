@@ -22,7 +22,7 @@ describe('App / User Flow', () => {
       .get('.weather-tude-title-text')
       .should('contain', 'WEATHER')
       .get('.weather-tude-description')
-      .should('contain', 'The imperfect weather app that tells it like it is.')
+      .should('contain', 'The weather app that tells it like it is.')
       .get('.form-container')
       .get('input')
       .should('exist')

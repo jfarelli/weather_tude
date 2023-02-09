@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 import { render, fireEvent, screen } from '@testing-library/react';
 
 describe('Form', () => {
-  test('Input value changes on change', () => {
+  test('should change input value onChange', () => {
     const setCityName = jest.fn();
     const searchLocation = jest.fn();
 
@@ -20,7 +20,7 @@ describe('Form', () => {
     expect(setCityName).toHaveBeenCalledWith('Denver');
   });
 
-  test('searchLocation function is called on keyDown', () => {
+  test('should call searchLocation function on keyDown', () => {
     const setCityName = jest.fn();
     const searchLocation = jest.fn();
 

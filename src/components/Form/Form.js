@@ -15,8 +15,8 @@ const Form = ({ cityName, setCityName, searchLocation }) => {
         placeholder="Enter City Name"
       ></input>
       <label role="none">
-        For <span className="form-spans">(possibly)</span> more accurate
-        results, search by <span className="form-spans">City Name</span>,{' '}
+        For more accurate results, search by{' '}
+        <span className="form-spans">City Name</span>,{' '}
         <span className="form-spans">State Code</span>, and{' '}
         <span className="form-spans">Zip Code</span> together. <br></br>
       </label>

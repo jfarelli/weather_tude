@@ -2,7 +2,6 @@ import { render, screen, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import WeatherDetails from './WeatherDetails';
 import mockData from '../../mockData/mockData';
-import insults from '../../data/data';
 
 afterEach(cleanup);
 
@@ -27,63 +26,63 @@ const MockWeatherDetails = () => {
 };
 
 describe('WeatherDetails', () => {
-  test('renders the correct city name', () => {
+  test('should render the correct city name', () => {
     render(<MockWeatherDetails />);
     expect(screen.getByText('Denver')).toBeInTheDocument();
   });
 
-  test('displays Current Temperature', () => {
+  test('should display the current temperature', () => {
     render(<MockWeatherDetails />);
     expect(screen.getByText(/29/i)).toBeInTheDocument();
   });
 
-  test('displays Current Weather Condition', () => {
+  test('should display the current weather condition', () => {
     render(<MockWeatherDetails />);
     expect(screen.getByText(/light snow/i)).toBeInTheDocument();
   });
 
-  test('displays High and Low Temperatures', () => {
+  test('should display the high and low temperatures', () => {
     render(<MockWeatherDetails />);
     expect(screen.getByText(/40/i)).toBeInTheDocument();
     expect(screen.getByText(/19/i)).toBeInTheDocument();
   });
 
-  test('displays a box with further weather details', () => {
+  test('should display a box with further weather details', () => {
     render(<MockWeatherDetails />);
     expect(screen.getByTestId(/display-box/i)).toBeInTheDocument();
   });
 
-  test('displays "Feels Like" text, displayed on page as "Other\'s say it\'s"', () => {
+  test('should display "Feels Like" text, displayed on page as "Other\'s say it\'s"', () => {
     render(<MockWeatherDetails />);
     expect(screen.getByText(/others say it's/i)).toBeInTheDocument();
   });
 
-  test('displays "Feels Like" temperature', () => {
+  test('should display "Feels Like" temperature', () => {
     render(<MockWeatherDetails />);
     expect(screen.getByText(/26/i)).toBeInTheDocument();
   });
 
-  test('displays "Humidity" text, displayed on page as "Air Wetness"', () => {
+  test('should display "Humidity" text, displayed on page as "Air Wetness"', () => {
     render(<MockWeatherDetails />);
     expect(screen.getByText(/air wetness/i)).toBeInTheDocument();
   });
 
-  test('displays "Humidity" percentage', () => {
+  test('should display "Humidity" percentage', () => {
     render(<MockWeatherDetails />);
     expect(screen.getByText(/48/i)).toBeInTheDocument();
   });
 
-  test('displays "Wind Speed" text, displayed on page as "It\'s this windy"', () => {
+  test('should display "Wind Speed" text, displayed on page as "It\'s this windy"', () => {
     render(<MockWeatherDetails />);
     expect(screen.getByText(/it's this windy/i)).toBeInTheDocument();
   });
 
-  test('displays "Wind Speed" details', () => {
+  test('should display "Wind Speed" details', () => {
     render(<MockWeatherDetails />);
     expect(screen.getByText(/3 mph/i)).toBeInTheDocument();
   });
 
-  test('displays a container that holds some sassy text to the user', () => {
+  test('should display a container that holds some rude text to the user', () => {
     render(<MockWeatherDetails />);
     expect(screen.getByTestId(/rude-container/i)).toBeInTheDocument();
   });

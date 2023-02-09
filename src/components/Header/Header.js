@@ -9,7 +9,7 @@ const Header = ({ cityName, setCityName, searchLocation }) => {
           WEATHER-<span className="tude">TUDE</span>
         </p>
         <p className="weather-tude-description">
-          "The imperfect weather app that tells it like it is."
+          "The weather app that tells it like it is."
         </p>
       </div>
       <div>

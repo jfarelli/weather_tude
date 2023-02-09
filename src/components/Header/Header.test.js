@@ -1,7 +1,7 @@
 import Header from './Header';
 import Form from '../Form/Form';
 import '@testing-library/jest-dom';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 
 jest.mock('../Form/Form', () => {
   return jest.fn(({ cityName, setCityName, searchLocation }) => {
@@ -30,11 +30,11 @@ describe('Header', () => {
     );
     expect(screen.getByText(/weather-/i)).toBeInTheDocument();
     expect(
-      screen.getByText(/the imperfect weather app that tells it like it is./i)
+      screen.getByText(/the weather app that tells it like it is./i)
     ).toBeInTheDocument();
   });
 
-  test('renders the header with the form element', () => {
+  test('should render the header with the form element', () => {
     render(
       <Header
         cityName="Denver"

@@ -4,14 +4,14 @@ import LoadingIcon from './LoadingIcon';
 import { render, screen } from '@testing-library/react';
 
 describe('LoadingIcon component', () => {
-  test('LoadingIcon component should render a Header and a loading image', () => {
+  test('should render a Header and a loading image', () => {
     render(<LoadingIcon />);
 
     expect(screen.getByTestId('header')).toBeInTheDocument();
     expect(screen.getByAltText('loading')).toBeInTheDocument();
   });
 
-  test('LoadingIcon component should render a loading image with the correct class name and source', () => {
+  test('should render a loading image with the correct class name and source', () => {
     render(<LoadingIcon />);
 
     expect(screen.getByAltText('loading')).toHaveClass('loading-image');
@@ -20,7 +20,7 @@ describe('LoadingIcon component', () => {
     );
   });
 
-  test('LoadingIcon component should render a loading container with the correct class name', () => {
+  test('should render a loading container with the correct class name', () => {
     render(<LoadingIcon />);
 
     expect(screen.getByTestId('loading-container')).toBeInTheDocument();
