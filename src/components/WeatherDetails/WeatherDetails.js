@@ -3,8 +3,7 @@ import './WeatherDetails.css';
 const WeatherDetails = ({
   data,
   degToCompass,
-  displayedText,
-  cityFillerWord,
+  rudeText,
   temperatureFillerWord,
   weatherConFillerWord,
 }) => {
@@ -12,7 +11,6 @@ const WeatherDetails = ({
     <div className="info-div-container">
       <div className="city-name-container">
         <h1 className="city-name">{data.name}</h1>
-        <p className="maybe">{cityFillerWord}</p>
         <h2 className="current-temp">{data.main.temp.toFixed()}°F</h2>
         <p className="current-temp-p">{temperatureFillerWord}</p>
         <h2 className="weather-description">
@@ -47,7 +45,7 @@ const WeatherDetails = ({
           </div>
         </div>
         <div className="rude-text-container" data-testid="rude-container">
-          <p className="rude-text">{displayedText}</p>
+          <p className="rude-text">{rudeText}</p>
         </div>
       </div>
     </div>

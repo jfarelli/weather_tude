@@ -8,7 +8,6 @@ afterEach(cleanup);
 const MockWeatherDetails = () => {
   const data = mockData;
   const displayedText = '';
-  const cityFillerWord = '';
   const temperatureFillerWord = '';
   const weatherConFillerWord = '';
   const degToCompass = jest.fn();
@@ -18,7 +17,6 @@ const MockWeatherDetails = () => {
       data={data}
       degToCompass={degToCompass}
       displayedText={displayedText}
-      cityFillerWord={cityFillerWord}
       temperatureFillerWord={temperatureFillerWord}
       weatherConFillerWord={weatherConFillerWord}
     />

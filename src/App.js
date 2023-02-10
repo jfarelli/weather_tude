@@ -1,7 +1,7 @@
 import './App.css';
 import axios from 'axios';
 import insults from './data/data';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import useFiveDay from './hooks/useFiveDay';
 import useTempText from './hooks/useTempText';
 import Header from './components/Header/Header';
@@ -13,40 +13,39 @@ import WeatherDetails from './components/WeatherDetails/WeatherDetails';
 const App = () => {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(false);
-  const [temp, setTemp] = useState('');
+  const [temp, setTemp] = useState(0);
   const [cityName, setCityName] = useState('');
-  const [lat, setLat] = useState('');
-  const [lon, setLon] = useState('');
+  const [lat, setLat] = useState(0);
+  const [lon, setLon] = useState(0);
 
-  const [displayedText, displayTempText] = useTempText(temp, insults);
+  const [rudeText, displayRudeText] = useTempText(temp, insults);
   const [fiveDayForecast] = useFiveDay(lat, lon);
-  const [
-    cityFillerWord,
-    temperatureFillerWord,
-    weatherConFillerWord,
-    displayFillerWords,
-  ] = useFillerWords(insults);
+  const [temperatureFillerWord, weatherConFillerWord, displayFillerWords] =
+    useFillerWords(insults);
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=${process.env.REACT_APP_API_KEY}`;
+  useEffect(() => {
+    displayRudeText();
+  }, [data]);
 
   const searchLocation = (e) => {
     if (e.key !== 'Enter') return;
     setLoading(true);
     e.preventDefault();
     axios
-      .get(url)
+      .get(
+        `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=${process.env.REACT_APP_API_KEY}`
+      )
       .then(({ data }) => {
         setData(data);
         const { main, coord } = data;
         setTemp(main.temp);
         setLat(coord.lat);
         setLon(coord.lon);
-        displayTempText();
         displayFillerWords();
         setLoading(false);
       })
       .catch((error) => {
-        console.error('ERROR: ', error.message);
+        console.error('ERROR!!! ', error.message);
         window.alert(
           "That's not a real place. Try again, but make sure you know how to spell first."
         );
@@ -95,8 +94,7 @@ const App = () => {
               <WeatherDetails
                 data={data}
                 degToCompass={degToCompass}
-                displayedText={displayedText}
-                cityFillerWord={cityFillerWord}
+                rudeText={rudeText}
                 temperatureFillerWord={temperatureFillerWord}
                 weatherConFillerWord={weatherConFillerWord}
               />

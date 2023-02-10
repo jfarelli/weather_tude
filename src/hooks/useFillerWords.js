@@ -1,20 +1,10 @@
 import { useState } from 'react';
 
 const useFillers = (insults) => {
-  const [cityFillerWord, setCityFillerWord] = useState('');
   const [temperatureFillerWord, setTemperatureFillerWord] = useState('');
   const [weatherConFillerWord, setWeatherConFillerWord] = useState('');
 
   const displayFillerWords = () => {
-    if (insults.fillerWords) {
-      setCityFillerWord(
-        insults.fillerWords[
-          Math.floor(
-            Math.random(insults.fillerWords) * insults.fillerWords.length
-          )
-        ]
-      );
-    }
     if (insults.fillerTempText) {
       setTemperatureFillerWord(
         insults.fillerTempText[
@@ -36,12 +26,7 @@ const useFillers = (insults) => {
     }
   };
 
-  return [
-    cityFillerWord,
-    temperatureFillerWord,
-    weatherConFillerWord,
-    displayFillerWords,
-  ];
+  return [temperatureFillerWord, weatherConFillerWord, displayFillerWords];
 };
 
 export default useFillers;

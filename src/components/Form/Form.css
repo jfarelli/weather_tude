@@ -14,9 +14,7 @@ input {
 }
 
 input:focus {
-  outline: none !important;
-  background-color: whitesmoke;
-  box-shadow: 0 0 20px #599acf;
+  outline: 5px solid #599acf;
 }
 
 .form-container {
@@ -35,22 +33,11 @@ input:focus {
   color: whitesmoke;
 }
 
-/* Desktop */
-@media screen and (min-width: 1024px) {
-
-}
-
-/* Tablet */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-
-}
-
-/* Smartphone */
 @media screen and (max-width: 767px) {
   label {
     font-size: 1.5vw;
   }
-  
+
   input {
     width: 45vw;
   }

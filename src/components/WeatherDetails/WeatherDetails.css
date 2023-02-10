@@ -16,7 +16,6 @@
 .city-name {
   font-size: 7.5em;
   margin-bottom: -3.5%;
-  /* margin-top: -7%; */
   transform: translateX(-5px);
 }
 
@@ -155,14 +154,12 @@
 }
 
 /* Desktop */
-@media screen and (min-width: 1024px) {
-
-}
+/* @media screen and (min-width: 1024px) {
+} */
 
 /* Tablet */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-
-}
+/* @media screen and (min-width: 768px) and (max-width: 1023px) {
+} */
 
 /* Smartphone */
 @media screen and (max-width: 767px) {

@@ -3,9 +3,9 @@
 <br>
 </h2>
 <br>
-<p align="center"> I live in Colorado where the weather seems to change every 15 minutes and it can take your attitude from a soaring high, playing outdoor games in the beautiful sun and warmth, to dismal and agravating low as the wind, rain, and possible snow come out of nowhere to freeze out your hopes and dreams.
+<p align="center"> I live in Colorado where the weather seems to change every 15 minutes and can take your attitude from a soaring highs while you enjoy the sun, to dismal and agravating lows as the wind, rain, and possible snow come out of nowhere to freeze out your hopes and dreams. So, since the weather has attitude, why not your weather app???</p>
 <br>
-<p align="center">Weather-TUDE pulls in data from the OpenWeather API to get the weather data of whichever city the user puts in and gives the user up-to-date weather with a little attitude, so they (hopefully) know what to expect...maybe.
+<p align="center">Weather-TUDE pulls in data from the OpenWeather API to get the current weather & five-day forecast data of a city the user inputs and delivers the weather with a little slice of attitude.</p>
 
 <br>
 
@@ -43,17 +43,15 @@ Jordan Farelli: [LinkedIn](https://www.linkedin.com/in/jordan-farelli/) | [GitHu
 
 <br>
 
-*USER FLOW*
-* User Flow
+*City Name Input*
 
-
+https://user-images.githubusercontent.com/97558758/218168809-9c62cc26-dbe3-4a79-9ce1-8f5f6a33a05a.mov
 
 <br>
 
-*ERROR HANDLING*
-* Invalid Entry
+*Invalid City Name*
 
-
+https://user-images.githubusercontent.com/97558758/218169003-18c61489-de11-43f3-9a4f-2ae1e8678302.mov
 
 <br>
 
@@ -64,16 +62,15 @@ Jordan Farelli: [LinkedIn](https://www.linkedin.com/in/jordan-farelli/) | [GitHu
 
 
 **Developer:**
-<!-- * End to End testing with mulitple UX in mind -->
-<!-- * Provide different React Router routes -->
-<!-- * Proper error handling for all "Sad Paths" of a UX -->
-<!-- * Secure a 95% lighthouse accessibility score -->
-<!-- * A consistent, modular file structure -->
+* Unit Testing w/ Jest & End to End testing with Cypress
+* Error handling for invalid city name input
+* Secure a 100% lighthouse accessibility score
+* A consistent, modular file structure
 
 <br>
 
 ### Challenges & Reflections: <a name="challenges"></a>
-* This is my first solo-project after graduating the [Turing School of Software & Design](https://turing.edu/?gclid=Cj0KCQiAz9ieBhCIARIsACB0oGKG2l2iJY1j7t81uU6Pn6dJqdD3gi0m_QfV66vrhnGg4r7xgsv--RkaAuzSEALw_wcB).
+* This is my first side-project after graduating the [Turing School of Software & Design](https://turing.edu/?gclid=Cj0KCQiAz9ieBhCIARIsACB0oGKG2l2iJY1j7t81uU6Pn6dJqdD3gi0m_QfV66vrhnGg4r7xgsv--RkaAuzSEALw_wcB).
 * It was great putting the skills I learned to use, and also implementing some new ones, like creating custom hooks and having them work! 
 
 <br>
@@ -81,6 +78,8 @@ Jordan Farelli: [LinkedIn](https://www.linkedin.com/in/jordan-farelli/) | [GitHu
 ### Future Iterations: <a name="future"></a>
 * Display the high and low temp for each day in the 5-Day Forecast.
 * Create an external link to the National Weather Service, or similar site for further satellite weather details.
+* Improving responsiveness
+* Implementing TypeScript
 
 <br>
 

@@ -2,6 +2,7 @@ import './Form.css';
 
 const Form = ({ cityName, setCityName, searchLocation }) => {
   const handleChange = (e) => {
+    e.preventDefault();
     setCityName(e.target.value);
   };
 
@@ -11,7 +12,7 @@ const Form = ({ cityName, setCityName, searchLocation }) => {
         type="text"
         defaultValue={cityName}
         onKeyDown={searchLocation}
-        onChange={(e) => handleChange(e)}
+        onChange={handleChange}
         placeholder="Enter City Name"
       ></input>
       <label role="none">

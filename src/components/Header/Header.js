@@ -3,7 +3,7 @@ import Form from '../Form/Form';
 
 const Header = ({ cityName, setCityName, searchLocation }) => {
   return (
-    <div className="header-container" data-testid='header'>
+    <div className="header-container" data-testid="header">
       <div className="title">
         <p className="weather-tude-title-text">
           WEATHER-<span className="tude">TUDE</span>

@@ -30,15 +30,6 @@ const insults = {
     'If only you had someone to hold in these cold, trying times...',
   ],
 
-  fillerWords: [
-    '...maybe.',
-    '...possibly.',
-    '...perhaps.',
-    '...conceivably.',
-    '...hopefully.',
-    '...probably.',
-  ],
-
   fillerTempText: [
     '...depending on who you talk to.',
     '...is what Bill said.',
